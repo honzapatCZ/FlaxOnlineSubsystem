@@ -4,9 +4,9 @@
 #include "Engine/Core/Compiler.h"
 #include "Engine/Core/Config.h"
 
-API_INTERFACE() class ONLINEPLATFORM_API IAchievmentService
+API_INTERFACE() class ONLINEPLATFORM_API IAchievementService
 {
-	DECLARE_SCRIPTING_TYPE_MINIMAL(IAchievmentService)
+	DECLARE_SCRIPTING_TYPE_MINIMAL(IAchievementService)
 public:
 
 	/// <summary>

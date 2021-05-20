@@ -14,7 +14,7 @@ public:
 
 	void Init() override;
 	
-	IAchievmentService* GetAchievementService() override;
+	IAchievementService* GetAchievementService() override;
 
 	IFriendsService* GetFriendsService() override;
 };

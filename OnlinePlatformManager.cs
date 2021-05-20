@@ -14,7 +14,7 @@ namespace OnlinePlatform
     {
         public static void SetPlatforms(params string[] platforms)
         {
-            
+
         }
     }
 }

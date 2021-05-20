@@ -13,7 +13,7 @@ void PS4OnlinePlatform::Init()
     
 }
 
-IAchievmentService* PS4OnlinePlatform::GetAchievementService()
+IAchievementService* PS4OnlinePlatform::GetAchievementService()
 {
     return nullptr;
 }

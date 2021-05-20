@@ -20,7 +20,7 @@ public:
 	/// Return the achievement service instance for this platform
 	/// </summary>
 	/// <returns>The achievement service for this platform</returns>
-	virtual IAchievmentService* GetAchievementService() = 0;
+	virtual IAchievementService* GetAchievementService() = 0;
 
 	/// <summary>
 	/// Return the friends service instance for this platform
