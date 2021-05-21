@@ -7,24 +7,31 @@
 #include "IFriendsService.h"
 #include "IAchievementService.h"
 
-API_INTERFACE() class ONLINEPLATFORM_API IOnlinePlatform
+API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IOnlinePlatform : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_MINIMAL(IOnlinePlatform)
 public:
 	/// <summary>
 	/// Place to init your subsystem
 	/// </summary>
-	virtual void Init() = 0;
+	/// <returns>Whether or not initting was sucessfull</returns>
+	API_FUNCTION() virtual bool Init() = 0;
+
+	/// <summary>
+	/// Use any means necessary to proof that the user actually owns the game. This function is used to potentially halt the engine.
+	/// </summary>
+	/// <returns>Whether or not user owns this game</returns>
+	API_FUNCTION() virtual bool VerifyOwnership() = 0;
 
 	/// <summary>
 	/// Return the achievement service instance for this platform
 	/// </summary>
 	/// <returns>The achievement service for this platform</returns>
-	virtual IAchievementService* GetAchievementService() = 0;
+	API_FUNCTION() virtual IAchievementService* GetAchievementService() = 0;
 
 	/// <summary>
 	/// Return the friends service instance for this platform
 	/// </summary>
 	/// <returns>The achievement service for this platform</returns>
-	virtual IFriendsService* GetFriendsService() = 0;
+	API_FUNCTION() virtual IFriendsService* GetFriendsService() = 0;
 };

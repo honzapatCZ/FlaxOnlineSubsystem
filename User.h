@@ -20,5 +20,5 @@ API_STRUCT() struct ONLINEPLATFORM_API User
 	/// The Users profile picture
 	/// </summary>
 	API_FIELD();
-	SpriteHandle Picture;
+	String Picture;
 };

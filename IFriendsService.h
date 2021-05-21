@@ -6,7 +6,7 @@
 
 #include "User.h"
 
-API_INTERFACE() class ONLINEPLATFORM_API IFriendsService
+API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IFriendsService : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_MINIMAL(IFriendsService)
 public:
@@ -14,10 +14,10 @@ public:
 	/// <summary>
 	/// Gets the currect user
 	/// </summary>
-	virtual User GetCurrectUser() = 0;
+	API_FUNCTION() virtual User GetCurrectUser() = 0;
 
 	/// <summary>
 	/// Gets the currect user
 	/// </summary>
-	virtual Array<User> GetFriends() = 0;
+	API_FUNCTION() virtual Array<User> GetFriends() = 0;
 };
