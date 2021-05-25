@@ -3,13 +3,12 @@
 
 #pragma once
 
-#include "Engine/Scripting/Script.h"
-#include <Engine/Render2D/SpriteAtlas.h>
+#include "Engine/Scripting/ScriptingType.h"
 
 API_STRUCT() struct ONLINEPLATFORM_API User
 {
-	DECLARE_SCRIPTING_TYPE_MINIMAL(NavAgentProperties);
-
+	DECLARE_SCRIPTING_TYPE_MINIMAL(User);
+public:
 	/// <summary>
 	/// The Users name
 	/// </summary>

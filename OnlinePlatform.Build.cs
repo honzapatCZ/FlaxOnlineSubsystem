@@ -8,22 +8,14 @@ public class OnlinePlatform : GameModule
     public override void Init()
     {
         base.Init();
+
+        BuildNativeCode = true;
     }
 
     /// <inheritdoc />
     public override void Setup(BuildOptions options)
     {
         base.Setup(options);
-
-        Flax.Build.Log.Info(string.Join(" ", options.PublicDefinitions));
-        Flax.Build.Log.Info(string.Join(" ", options.ScriptingAPI.Defines));        
-        
-        if (options.ScriptingAPI.Defines.Contains("STEAMWORKS_NET_FLAX") && (options.Platform.Target == TargetPlatform.Windows || options.Platform.Target == TargetPlatform.Linux))
-        {
-            Flax.Build.Log.Info("Prosil bych 5 deka steamu");
-            options.PublicDependencies.Add("SteamWorksNETFlax");
-        }
-            
 
         options.ScriptingAPI.IgnoreMissingDocumentationWarnings = true;
 
