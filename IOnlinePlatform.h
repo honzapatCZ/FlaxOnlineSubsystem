@@ -8,10 +8,10 @@
 API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IOnlinePlatform : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_NO_SPAWN(IOnlinePlatform)
+protected:
+	explicit IOnlinePlatform(const SpawnParams& params) : PersistentScriptingObject(params)	{}
+
 public:
-	IOnlinePlatform() : PersistentScriptingObject(SpawnParams(Guid::New(), TypeInitializer))
-	{
-	}
 	/// <summary>
 	/// Place to init your subsystem
 	/// </summary>

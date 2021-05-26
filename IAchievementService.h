@@ -8,11 +8,10 @@
 API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IAchievementService : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_NO_SPAWN(IAchievementService)
-public:
-	IAchievementService() : PersistentScriptingObject(SpawnParams(Guid::New(), TypeInitializer))
-	{
-	}
+protected:
+	explicit IAchievementService(const SpawnParams& params) : PersistentScriptingObject(params)	{}
 
+public:	
 	/// <summary>
 	/// Sets achievemt of identifier and float value, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
