@@ -2,7 +2,7 @@
 
 
 #pragma once
-
+#include "Engine/Core/Types/String.h"
 #include "Engine/Scripting/ScriptingType.h"
 
 API_STRUCT() struct ONLINEPLATFORM_API User
@@ -12,12 +12,10 @@ public:
 	/// <summary>
 	/// The Users name
 	/// </summary>
-	API_FIELD()
-	String Name;
+	API_FIELD() String Name = String::Empty;
 
 	/// <summary>
 	/// The Users profile picture
 	/// </summary>
-	API_FIELD();
-	String Picture;
+	API_FIELD() String Picture = String::Empty;
 };

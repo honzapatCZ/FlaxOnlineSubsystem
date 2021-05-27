@@ -9,14 +9,14 @@ API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IOnlinePlatform : public P
 {
 	DECLARE_SCRIPTING_TYPE_NO_SPAWN(IOnlinePlatform)
 protected:
-	explicit IOnlinePlatform(const SpawnParams& params) : PersistentScriptingObject(params)	{}
+	FORCE_INLINE IOnlinePlatform(const SpawnParams& params) : PersistentScriptingObject(params)	{}
 
 public:
 	/// <summary>
 	/// Place to init your subsystem
 	/// </summary>
 	/// <returns>Whether or not initting was sucessfull</returns>
-	API_FUNCTION() virtual bool Init() = 0;
+	API_FUNCTION() FORCE_INLINE virtual bool Init() = 0;
 
 	/// <summary>
 	/// Great place to clean up your mess
@@ -27,11 +27,11 @@ public:
 	/// Use any means necessary to proof that the user actually owns the game. This function is used to potentially halt the engine.
 	/// </summary>
 	/// <returns>Whether or not user owns this game</returns>
-	API_FUNCTION() virtual bool VerifyOwnership() = 0;
+	API_FUNCTION() FORCE_INLINE virtual bool VerifyOwnership() = 0;
 
 	/// <summary>
 	/// Return the achievement service instance for this platform
 	/// </summary>
 	/// <returns>The achievement service for this platform</returns>
-	API_FUNCTION() virtual IAchievementService* GetAchievementService() = 0;
+	API_FUNCTION() FORCE_INLINE virtual IAchievementService* GetAchievementService() = 0;
 };
