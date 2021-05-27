@@ -5,7 +5,7 @@
 
 #include "IAchievementService.h"
 
-API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IOnlinePlatform : public PersistentScriptingObject
+API_CLASS(NoSpawn, Abstract) class ONLINESUBSYSTEM_API IOnlinePlatform : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_NO_SPAWN(IOnlinePlatform)
 protected:
