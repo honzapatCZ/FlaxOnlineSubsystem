@@ -1,9 +1,0 @@
-/.vs
-/.git
-/Source/bin
-/Source/obj
-/Source/*.Gen.*
-/Source/*.csproj
-/Binaries
-/Cache
-/Online Subsystem Plugin.sln
