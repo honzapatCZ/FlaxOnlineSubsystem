@@ -1,9 +1,8 @@
 ﻿// Copyright (C) 2021 Nejcraft Do Not Redistribute
 #pragma once
 
-#include "Engine/Core/Compiler.h"
-#include "Engine/Core/Config.h"
-#include "Engine/Scripting/ManagedCLR/MUtils.h"
+#include "Engine/Core/Types/String.h"
+#include "Engine/Scripting/ScriptingObject.h"
 
 API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IAchievementService : public PersistentScriptingObject
 {
@@ -15,12 +14,12 @@ public:
 	/// <summary>
 	/// Sets achievemt of identifier and float value, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual void SetAchievementProgress(StringView& identifier, float value) = 0;
+	API_FUNCTION() FORCE_INLINE virtual void SetAchievementProgress(const String& identifier, float value) = 0;
 
 	/// <summary>
 	/// Sets achievemt of identifier and float value, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual void SetAchievement(StringView& identifier, bool value) = 0;
+	API_FUNCTION() FORCE_INLINE virtual void SetAchievement(const String& identifier, bool value) = 0;
 
 	/// <summary>
 	/// Gets all achievements, please return the universal or ignore the value if its not mapped
@@ -30,10 +29,10 @@ public:
 	/// <summary>
 	/// Gets float value of achievement, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual float GetAchievementProgress(StringView& identifier) = 0;
+	API_FUNCTION() FORCE_INLINE virtual float GetAchievementProgress(const String& identifier) = 0;
 
 	/// <summary>
 	/// Gets float value of achievement, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual bool GetAchievement(StringView& identifier) = 0;
+	API_FUNCTION() FORCE_INLINE virtual bool GetAchievement(const String& identifier) = 0;
 };
