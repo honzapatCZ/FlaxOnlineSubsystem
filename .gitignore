@@ -1,3 +1,6 @@
 /.vs
 /.git
+/Source/bin
+/Source/obj
+/Source/*.Gen.*
 /Online Subsystem Plugin.sln
