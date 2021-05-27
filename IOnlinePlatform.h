@@ -19,6 +19,11 @@ public:
 	API_FUNCTION() virtual bool Init() = 0;
 
 	/// <summary>
+	/// Great place to clean up your mess
+	/// </summary>
+	API_FUNCTION() virtual void Deinit() = 0;
+
+	/// <summary>
 	/// Use any means necessary to proof that the user actually owns the game. This function is used to potentially halt the engine.
 	/// </summary>
 	/// <returns>Whether or not user owns this game</returns>
