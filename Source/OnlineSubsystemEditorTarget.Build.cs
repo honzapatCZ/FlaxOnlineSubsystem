@@ -8,6 +8,6 @@ public class OnlineSubsystemEditorTarget : GameProjectEditorTarget
         base.Init();
 
         // Reference the modules for editor
-        Modules.Add("OnlinePlatform");
+        Modules.Add("OnlineSubsystem");
     }
 }

@@ -8,6 +8,6 @@ public class OnlineSubsystemTarget : GameProjectTarget
         base.Init();
 
         // Reference the modules for game
-        Modules.Add("OnlinePlatform");
+        Modules.Add("OnlineSubsystem");
     }
 }

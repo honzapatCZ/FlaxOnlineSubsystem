@@ -5,7 +5,7 @@
 #include "Engine/Core/Types/String.h"
 #include "Engine/Scripting/ScriptingType.h"
 
-API_STRUCT() struct ONLINEPLATFORM_API User
+API_STRUCT() struct ONLINESUBSYSTEM_API User
 {
 	DECLARE_SCRIPTING_TYPE_MINIMAL(User);
 public:

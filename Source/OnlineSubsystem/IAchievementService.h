@@ -4,7 +4,7 @@
 #include "Engine/Core/Types/String.h"
 #include "Engine/Scripting/ScriptingObject.h"
 
-API_CLASS(NoSpawn, Abstract) class ONLINEPLATFORM_API IAchievementService : public PersistentScriptingObject
+API_CLASS(NoSpawn, Abstract) class ONLINESUBSYSTEM_API IAchievementService : public PersistentScriptingObject
 {
 	DECLARE_SCRIPTING_TYPE_NO_SPAWN(IAchievementService)
 protected:
@@ -24,7 +24,7 @@ public:
 	/// <summary>
 	/// Gets all achievements, please return the universal or ignore the value if its not mapped
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual Array<String&> GetAchievements() = 0;
+	API_FUNCTION() FORCE_INLINE virtual Array<String> GetAchievements() = 0;
 
 	/// <summary>
 	/// Gets float value of achievement, NOTE: You are responsible for mapping this using something like config

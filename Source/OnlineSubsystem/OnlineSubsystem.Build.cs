@@ -2,7 +2,7 @@
 using Flax.Build.NativeCpp;
 using System.Linq;
 
-public class OnlinePlatform : GameModule
+public class OnlineSubsystem : GameModule
 {
     /// <inheritdoc />
     public override void Init()
