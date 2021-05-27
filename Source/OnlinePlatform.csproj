@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectTypeGuids>{BE633490-FBA4-41EB-80D4-EFA312592B8E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B4E994AC-6662-4058-A7F5-6DEEE5AD609C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OnlinePlatform</RootNamespace>
+    <AssemblyName>OnlinePlatform.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <LangVersion>7.3</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Debug\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Debug\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEBUG;PLATFORM_WINDOWS;FLAX_EDITOR;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Debug\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Development|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Development\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Development\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Development\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEVELOPMENT;PLATFORM_WINDOWS;FLAX_EDITOR;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Development\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Release|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Release\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Release\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_RELEASE;PLATFORM_WINDOWS;FLAX_EDITOR;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemEditorTarget\Windows\x64\Release\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x64\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Debug\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Debug\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEBUG;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x64\Debug\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Debug|Win32' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x86\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Debug\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Debug\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEBUG;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x86\Debug\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Development|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x64\Development\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Development\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Development\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEVELOPMENT;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x64\Development\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Development|Win32' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x86\Development\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Development\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Development\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEVELOPMENT;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x86\Development\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Release|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x64\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Release\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Release\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_RELEASE;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x64\Release\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.Windows.Release|Win32' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\Windows\x86\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Release\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\Windows\x86\Release\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_RELEASE;PLATFORM_WINDOWS;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\Windows\x86\Release\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.UWP.Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\UWP\x64\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Debug\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Debug\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEBUG;PLATFORM_UWP;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\UWP\x64\Debug\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.UWP.Development|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\UWP\x64\Development\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Development\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Development\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEVELOPMENT;PLATFORM_UWP;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\UWP\x64\Development\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.UWP.Release|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\UWP\x64\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Release\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Release\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_RELEASE;PLATFORM_UWP;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\UWP\x64\Release\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.XboxOne.Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Debug\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Debug\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEBUG;PLATFORM_XBOX_ONE;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Debug\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.XboxOne.Development|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Development\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Development\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Development\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_DEVELOPMENT;PLATFORM_XBOX_ONE;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Development\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Game.XboxOne.Release|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Release\CSharp\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Release\CSharp\</IntermediateOutputPath>
+    <DefineConstants>BUILD_RELEASE;PLATFORM_XBOX_ONE;FLAX_GAME;FLAX;FLAX_ASSERTIONS;FLAX_1;FLAX_1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\Binaries\OnlineSubsystemTarget\XboxOne\x64\Release\OnlinePlatform.CSharp.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="FlaxEngine.CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Flax\Flax_1.1\Binaries/Editor/Win64/Development/FlaxEngine.CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OnlinePlatform.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Debug\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Development\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemEditorTarget\Windows\x64\Release\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Debug\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\Win32\Debug\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Development\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\Win32\Development\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\x64\Release\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\Windows\Win32\Release\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Debug\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Development\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\UWP\x64\Release\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Debug\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Development\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+    <Compile Visible="false" Include ="C:\Users\Watso\source\repos\FlaxOnlineSubsystem\Cache/Intermediate\OnlineSubsystemTarget\XboxOne\x64\Release\OnlinePlatform\OnlinePlatform.Bindings.Gen.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
