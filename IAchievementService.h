@@ -14,7 +14,7 @@ public:
 	/// <summary>
 	/// Sets achievemt of identifier and float value, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual void SetAchievementProgress(const String& identifier, float value) = 0;
+	API_FUNCTION() FORCE_INLINE virtual void SetAchievementProgress(const String& identifier, int value) = 0;
 
 	/// <summary>
 	/// Sets achievemt of identifier and float value, NOTE: You are responsible for mapping this using something like config
@@ -29,7 +29,7 @@ public:
 	/// <summary>
 	/// Gets float value of achievement, NOTE: You are responsible for mapping this using something like config
 	/// </summary>
-	API_FUNCTION() FORCE_INLINE virtual float GetAchievementProgress(const String& identifier) = 0;
+	API_FUNCTION() FORCE_INLINE virtual int GetAchievementProgress(const String& identifier) = 0;
 
 	/// <summary>
 	/// Gets float value of achievement, NOTE: You are responsible for mapping this using something like config

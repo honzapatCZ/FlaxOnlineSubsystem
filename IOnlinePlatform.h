@@ -21,13 +21,19 @@ public:
 	/// <summary>
 	/// Great place to clean up your mess
 	/// </summary>
-	API_FUNCTION() virtual void Deinit() = 0;
+	API_FUNCTION() FORCE_INLINE virtual void Deinit() = 0;
 
 	/// <summary>
 	/// Use any means necessary to proof that the user actually owns the game. This function is used to potentially halt the engine.
+	/// Note that at this point there's no guarantee that your Init was successfull, though this doesnt apply to other functions which are not invoked if your init failed.
 	/// </summary>
-	/// <returns>Whether or not user owns this game</returns>
+	/// <returns>Whether or not user owns this game. If your library doesnt have this feature return true</returns>
 	API_FUNCTION() FORCE_INLINE virtual bool VerifyOwnership() = 0;
+
+	/// <summary>
+	/// Place to update all your hooks, note that this should not take too much time as its executed on the main thread
+	/// </summary>
+	API_FUNCTION() FORCE_INLINE virtual void Update() = 0;
 
 	/// <summary>
 	/// Return the achievement service instance for this platform
